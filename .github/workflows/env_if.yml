@@ -1,0 +1,22 @@
+name: Push or Pull ?
+
+on: [push, pull_request]
+
+env:
+    PUSH: C'est un Push
+    PULL_REQUEST: C'est un Pull Request
+
+jobs:
+    push:
+        runs-on: uduntu latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Psuh
+            run: echo "$PUSH"
+    pull_request:
+        runs-on: uduntu latest
+            if: ${{github.event_name == 'pull_request'}}
+            steps:
+                - uses: actions/checkout@v3
+                - name: Pull Request
+                run: echo "$PUll_REQUEST"
