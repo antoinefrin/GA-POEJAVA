@@ -1,10 +1,7 @@
 name: Hello Antoine
-
 on: workflow_dispatch
-
 env:
     NAME: Antoine
-
 jobs:
     say_hello:
         runs-on: ubuntu-latest
