@@ -12,11 +12,11 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Psuh
-            run: echo "$PUSH"
+              run: echo "$PUSH"
     pull_request:
         runs-on: uduntu latest
-            if: ${{github.event_name == 'pull_request'}}
-            steps:
+        if: ${{github.event_name == 'pull_request'}}
+        steps:
                 - uses: actions/checkout@v3
                 - name: Pull Request
-                run: echo "$PUll_REQUEST"
+                  run: echo "$PUll_REQUEST"
